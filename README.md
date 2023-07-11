@@ -21,7 +21,7 @@ The code consists of the following classes:
 3. Dice: Represents the dice used in the game. It tracks the count of each dice side.
 4. Functions: Contains utility functions for formatting numbers with commas and plotting the statistics.
 
-Upon running the code, you will be prompted to enter the number of rounds to simulate. The program will simulate the game for the specified number of rounds. After the simulation, it will display a bar graph 6. showing the chance of landing on each card when starting from the "Go" space. The graph also includes statistics on the dice rolls, including single rolls, double rolls, and instances of being sent to jail.
+Upon running the code, you will be prompted to enter the number of rounds to simulate. The program will simulate the game for the specified number of rounds. After the simulation, it will display a bar graph. Showing the chance of landing on each card when starting from the "Go" space. The graph also includes statistics on the dice rolls, including single rolls, double rolls, and instances of being sent to jail.
 
 Contribution:
 Contributions to the code are welcome. If you have any suggestions, bug fixes, or improvements, please feel free to open an issue or submit a pull request.
