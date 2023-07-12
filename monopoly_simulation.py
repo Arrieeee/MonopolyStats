@@ -1,7 +1,5 @@
 import random
 import matplotlib.pyplot as plt
-from time import sleep
-from progress.bar import Bar
 from tqdm import tqdm
 
 
