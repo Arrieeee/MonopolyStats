@@ -8,10 +8,12 @@ How to Use:
 2. Make sure you have Python 3 installed on your system.
 3. Install the required dependencies. You can do this by running the following command:
 pip install matplotlib
-4. Open a terminal or command prompt and navigate to the directory where the monopoly_simulation.py file is located.
-5. Run the code by executing the following command:
+pip install art
+pip install tqdm
+5. Open a terminal or command prompt and navigate to the directory where the monopoly_simulation.py file is located.
+6. Run the code by executing the following command:
 python monopoly_simulation.py
-6. Follow the on-screen instructions to enter the number of rounds to simulate.
+7. Follow the on-screen instructions to enter the number of rounds to simulate.
 
 Warning: Potential Performance Impact
 
