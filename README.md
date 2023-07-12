@@ -7,9 +7,9 @@ How to Use:
 1. Clone the repository or download the monopoly_simulation.py file.
 2. Make sure you have Python 3 installed on your system.
 3. Install the required dependencies. You can do this by running the following command:
-  1. pip install matplotlib
-  2. pip install art
-  3. pip install tqdm
+   - pip install matplotlib
+   - pip install art
+   - pip install tqdm
 5. Open a terminal or command prompt and navigate to the directory where the monopoly_simulation.py file is located.
 6. Run the code by executing the following command:
 python monopoly_simulation.py
