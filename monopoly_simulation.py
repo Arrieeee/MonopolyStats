@@ -78,10 +78,12 @@ class Player:
         - cards: A list of Cards objects representing the game cards.
         """
         self.cards = cards
-        self.send_to_jail = 0  # Counter for the number of times the player goes to jail
+
         self.player_index = 0  # Index representing the player's position on the game board
         self.single_roll = 0  # Counter for the number of times the player rolls the dice once
         self.double_roll = 0  # Counter for the number of times the player rolls the dice twice
+        self.triple_roll = 0 # Counter for the number of times the player rolls the dice thirce
+        self.send_to_jail = 0  # Counter for the number of times the player goes to jail
 
     def roll(self):
         """
@@ -112,6 +114,7 @@ class Player:
 
                 total3 = dice1 + dice2
 
+                self.triple_roll += 1
                 return total1 + total2 + total3
         else:
             self.single_roll += 1
@@ -241,7 +244,7 @@ class Functions:
         # Reverse the result and join the characters
         return ''.join(result[::-1])
     
-    def plot_stats(cards, dices, total_rounds, single_roll, double_roll, send_to_jail):
+    def plot_stats(cards, dices, total_rounds, single_roll, double_roll, triple_roll, send_to_jail):
         """
         Plot the statistics of card and dice occurrences in the game simulation.
         
@@ -251,6 +254,7 @@ class Functions:
         - total_rounds: The total number of rounds simulated.
         - single_roll: The count of single rolls.
         - double_roll: The count of double rolls.
+        - triple_roll: The count of triple rolls.
         - send_to_jail: The count of times sent to jail.
         """
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 12))
@@ -266,17 +270,18 @@ class Functions:
         ax1.set_title(f'Chance of landing on certain cards when starting from Go (Rounds Simulated: {Functions.add_commas(total_rounds)})')
         ax1.tick_params(axis='x', rotation=90) 
 
-        total_rolls = single_roll + double_roll + send_to_jail
+        total_rolls = single_roll + double_roll + + triple_roll + send_to_jail
 
         single_roll_percentage = (single_roll / total_rolls) * 100
         double_roll_percentage = (double_roll / total_rolls) * 100
+        triple_roll_percentage = (triple_roll / total_rolls) * 100
         send_to_jail_percentage = (send_to_jail / total_rolls) * 100
 
-        roll_names = ['Once', 'Twice', 'Trice (Send To Jail)']
-        roll_counts = [single_roll, double_roll, send_to_jail]
-        roll_percentages = [single_roll_percentage, double_roll_percentage, send_to_jail_percentage]
+        roll_names = ['Once', 'Twice', 'Trice', 'Trice (Send To Jail)']
+        roll_counts = [single_roll, double_roll, triple_roll, send_to_jail]
+        roll_percentages = [single_roll_percentage, double_roll_percentage, triple_roll_percentage, send_to_jail_percentage]
 
-        roll_colors = ['green', 'yellow', 'red']  
+        roll_colors = ['blue', 'green', 'yellow', 'red']  
 
         roll_bars = ax2.bar(roll_names, roll_percentages, width=bar_width, label='Roll', color=roll_colors)
 
@@ -334,4 +339,4 @@ if __name__ == '__main__':
         Functions.main()
 
     # Plot the statistics of card and dice occurrences
-    Functions.plot_stats(cards, dices, total_rounds, player.single_roll, player.double_roll, player.send_to_jail)
+    Functions.plot_stats(cards, dices, total_rounds, player.single_roll, player.double_roll, player.triple_roll, player.send_to_jail)
