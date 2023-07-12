@@ -323,7 +323,7 @@ if __name__ == '__main__':
     dices = Dice.init_dice()
 
     # Get the total number of rounds to simulate from the user
-    total_rounds = int(input('Enter the number of rounds to simulate: '))
+        total_rounds = int(input('Enter the number of rounds to simulate (BE CAUTIOUS NOT TO INPUT AN EXCESSIVELY LARGE NUMBER) : '))
 
     # Simulate the game for the specified number of rounds
     for i in range(total_rounds):
