@@ -7,9 +7,9 @@ How to Use:
 1. Clone the repository or download the monopoly_simulation.py file.
 2. Make sure you have Python 3 installed on your system.
 3. Install the required dependencies. You can do this by running the following command:
-- pip install matplotlib
-- pip install art
-- pip install tqdm
+  - pip install matplotlib
+  - pip install art
+  - pip install tqdm
 5. Open a terminal or command prompt and navigate to the directory where the monopoly_simulation.py file is located.
 6. Run the code by executing the following command:
 python monopoly_simulation.py
@@ -23,10 +23,10 @@ Warning: Potential Performance Impact
 Functionality:
 The code consists of the following classes:
 
-1. Cards: Represents the different cards in the Monopoly game. Each card has a name and a counter to track the number of times it has been encountered.
-2. Player: Represents a player in the game. It tracks the player's position, the number of times they go to jail, and the number of single and double rolls.
-3. Dice: Represents the dice used in the game. It tracks the count of each dice side.
-4. Functions: Contains utility functions for formatting numbers with commas and plotting the statistics.
+- Cards: Represents the different cards in the Monopoly game. Each card has a name and a counter to track the number of times it has been encountered.
+- Player: Represents a player in the game. It tracks the player's position, the number of times they go to jail, and the number of single and double rolls.
+- Dice: Represents the dice used in the game. It tracks the count of each dice side.
+- Functions: Contains utility functions for formatting numbers with commas and plotting the statistics.
 
 Upon running the code, you will be prompted to enter the number of rounds to simulate. The program will simulate the game for the specified number of rounds. After the simulation, it will display a bar graph. Showing the chance of landing on each card when starting from the "Go" space. The graph also includes statistics on the dice rolls, including single rolls, double rolls, and instances of being sent to jail.
 
