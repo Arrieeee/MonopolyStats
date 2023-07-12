@@ -12,7 +12,12 @@ pip install matplotlib
 5. Run the code by executing the following command:
 python monopoly_simulation.py
 6. Follow the on-screen instructions to enter the number of rounds to simulate.
-   
+
+Warning: Potential Performance Impact
+When entering the number of rounds to simulate, please be cautious not to input an excessively large number. Keep in mind that very large numbers can significantly impact the performance of your computer and result in a long execution time for the simulation.
+For most practical purposes, a number like 100,000 is more than sufficient to obtain reliable results without putting undue strain on your system. It allows for a reasonably accurate representation of the probabilities involved in the game.
+Please consider this warning and select an appropriate number of rounds, such as 100,000 or a similar magnitude, to strike a balance between accuracy and computational efficiency during the simulation.
+
 Functionality:
 The code consists of the following classes:
 
