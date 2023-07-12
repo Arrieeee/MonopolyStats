@@ -1,5 +1,8 @@
 import random
 import matplotlib.pyplot as plt
+from time import sleep
+from progress.bar import Bar
+from tqdm import tqdm
 
 
 class Cards:
@@ -319,6 +322,13 @@ class Functions:
             player.update_card_stats(card_index)
             Dice.update_dice_stats(dices, str(move_total))
             player.reset_player_index()
+
+    def simulate_game(total_rounds):
+        # Simulate the game for the specified number of rounds
+        for _ in tqdm(range(total_rounds), desc='Processing...', unit='round'):
+            Functions.main()
+        # Plot the statistics of card and dice occurrences
+        Functions.plot_stats(cards, dices, total_rounds, player.single_roll, player.double_roll, player.triple_roll, player.send_to_jail)
     
 
 if __name__ == '__main__':
@@ -330,13 +340,8 @@ if __name__ == '__main__':
     # Get the total number of rounds to simulate from the user
     try:
         total_rounds = int(input('Enter the number of rounds to simulate (BE CAUTIOUS NOT TO INPUT AN EXCESSIVELY LARGE NUMBER (try 10000, and slowly go up)) : '))
-    except:
-        print('Please Enter A Number.')
+    except ValueError:
+        print('Please enter a valid number.')
         exit()
 
-    # Simulate the game for the specified number of rounds
-    for i in range(total_rounds):
-        Functions.main()
-
-    # Plot the statistics of card and dice occurrences
-    Functions.plot_stats(cards, dices, total_rounds, player.single_roll, player.double_roll, player.triple_roll, player.send_to_jail)
+    Functions.simulate_game(total_rounds)        
