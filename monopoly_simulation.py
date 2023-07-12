@@ -1,7 +1,13 @@
+'''
+-time: 2023/07/12 15:09
+-author: https://github.com/Arrieeee
+'''
+
+
 import random
 import matplotlib.pyplot as plt
 from tqdm import tqdm
-
+from art import *
 
 class Cards:
     def __init__(self, card_name):
@@ -327,8 +333,15 @@ class Functions:
             Functions.main()
         # Plot the statistics of card and dice occurrences
         Functions.plot_stats(cards, dices, total_rounds, player.single_roll, player.double_roll, player.triple_roll, player.send_to_jail)
-    
 
+    def banner():
+        title1 = text2art("MONOPOLY")
+        title2 = text2art("SIMULATION")
+        print(title1, title2)
+        print('WARNING')
+        print('BE CAUTIOUS NOT TO INPUT AN EXCESSIVELY LARGE NUMBER! Try 10000, and slowly go up.')
+
+    
 if __name__ == '__main__':
     # Initialize the cards, player, and dices
     cards = Cards.init_cards()
@@ -337,7 +350,8 @@ if __name__ == '__main__':
 
     # Get the total number of rounds to simulate from the user
     try:
-        total_rounds = int(input('Enter the number of rounds to simulate (BE CAUTIOUS NOT TO INPUT AN EXCESSIVELY LARGE NUMBER (try 10000, and slowly go up)) : '))
+        Functions.banner()
+        total_rounds = int(input('Enter the number of rounds to simulate: '))
     except ValueError:
         print('Please enter a valid number.')
         exit()
