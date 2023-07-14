@@ -1,8 +1,10 @@
 # Monopoly Card Landing Probability Simulation
 This Python code simulates a game of Monopoly and calculates the chance of landing on each card when starting from the "Go" space. It also provides a visualization of the statistics to help understand the probabilities involved.
 
-# How to Use:
+![example](https://github.com/Arrieeee/MonopolyStats/assets/94126075/93f71300-2fd5-4b10-af9c-3a753245a517)
 
+
+# How to Use:
 1. Clone the repository or download the monopoly_simulation.py file.
 2. Make sure you have Python 3 installed on your system.
 3. Install the required dependencies. You can do this by running the following command:
